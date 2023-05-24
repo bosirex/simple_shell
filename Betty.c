@@ -4,6 +4,7 @@
  * sum - adds two numbers
  * @a: first integer to be added
  * @b: second integer to be added
+ *
  * Return: sum of the two integers
 */
 
