@@ -8,8 +8,8 @@
 */
 void display_prompt() 
 {
-    printf("simple_shell$ ");
-    fflush(stdout);
+	printf("simple_shell$ ");
+	fflush(stdout);
 }
 /**
  * handle_exit - Function to handle the exit built-in command
@@ -17,5 +17,5 @@ void display_prompt()
 */
 void handle_exit() 
 {
-    exit(EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
