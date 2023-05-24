@@ -5,4 +5,5 @@
 (require 'whitespace)
 (setq whitespace-style '(face empty lines-tail trailing))
 (global-whitespace-mode t)
+
 (setq column-number-mode t)
