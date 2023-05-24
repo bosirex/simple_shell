@@ -5,19 +5,19 @@
 
 pid_t pid;
 
-int main() {
-    char *command = NULL;
-    size_t buffer_size = 0;
-    ssize_t user_input;
+int main(void)
+{
+	char *command = NULL;
+    	size_t buffer_size = 0;
+    	ssize_t user_input;
 
-    while (1) 
+    while (1)
     {
         display_prompt();
-
         /* Read the user input command */
         user_input = getline(&command, &buffer_size, stdin);
 
-        if (user_input == -1) 
+        if (user_input == -1)
         {
             /* Handle end of file (Ctrl+D) */
             printf("\n");
@@ -30,17 +30,17 @@ int main() {
         /* Fork a child process */
         pid = fork();
 
-        if (pid < 0) 
+        if (pid < 0)
         {
             /* Error occurred while forking */
             perror("fork");
             exit(EXIT_FAILURE);
-        } 
-        else if (pid == 0) 
+        }
+        else if (pid == 0)
         {
             /* Child process */
             /* Execute the command */
-            if (execlp(command, command, NULL) == -1) 
+            if (execlp(command, command, NULL) == -1)
             {
                 /* Executable not found */
                 fprintf(stderr, "./shell: No such file or directory %s\n", command);
@@ -49,13 +49,13 @@ int main() {
 
             /* This code is executed only if exec fails */
             exit(EXIT_SUCCESS);
-        } 
-        else 
+        }
+        else
         {
             /* Parent process */
             /* Wait for the child process to finish */
             int status;
-            if (waitpid(pid, &status, 0) == -1) 
+            if (waitpid(pid, &status, 0) == -1)
             {
                 perror("waitpid");
                 exit(EXIT_FAILURE);
