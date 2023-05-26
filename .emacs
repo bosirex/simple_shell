@@ -1,0 +1,15 @@
+(setq flycheck-gcc-pedantic t)
+(setq flycheck-gcc-warnings '("all" "extra" "error"))
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+(setq c-default-style "bsd"
+      c-basic-offset 8
+      tab-width 8
+      indent-tabs-mode t)
+
+(require 'whitespace)
+(setq whitespace-style '(face empty lines-tail trailing))
+(global-whitespace-mode t)
+
+(setq column-number-mode t)
