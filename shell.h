@@ -44,7 +44,27 @@ typedef struct liststring
 	char *str;
 	struct liststring *next;
 } lst_t;
-
+/**
+ * struct passdat - struct
+ * @arg: Pointer to an argument.
+ * @argv: Pointer to an array of command-line arguments.
+ * @path: Pointer to a string representing a file path.
+ * @argc: Number of command-line arguments.
+ * @lenght_count: Count of characters in a string.
+ * @err_number: Error number or code.
+ * @line_count_flag: Flag indicating whether line counting is enabled.
+ * @fname: Pointer to a file name.
+ * @env: Pointer to a linked list of environment variables.
+ * @history: Pointer to a linked list of command history entries.
+ * @alias: Pointer to a linked list of command aliases.
+ * @environ: Pointer to the array of environment variables.
+ * @env_changed: Flag indicating whether the environment has changed.
+ * @status: Status code or value.
+ * @cmd_buf: Pointer to a command buffer used for memory management.
+ * @cmd_buf_type: Type of command buffer (CMD_type: ||, &&, ;).
+ * @_readfd: File descriptor used for reading.
+ * @history_count: Count of command history entries.
+ */
 typedef struct passdat
 {
 	char *arg;
@@ -61,8 +81,6 @@ typedef struct passdat
 	char **environ;
 	int env_changed;
 	int status;
-	
-	
 
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
