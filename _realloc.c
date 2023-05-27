@@ -1,12 +1,13 @@
 #include "shell.h"
 
 /**
- * mem_set - fill the memory 
- * @s: pointer to memory
- * @b: the byte to fill *s with
- * @n: amount of bytes
+ * mem_set - fill the memory
+ * @t : fill
+ * @k : fill
+ * @m : fill
  * Return: (s) a pointer to memory area
  */
+
 char *mem_set(char *t, char k, unsigned int m)
 {
 	unsigned int j;
@@ -17,9 +18,10 @@ char *mem_set(char *t, char k, unsigned int m)
 }
 
 /**
- * f_free - freeing string of strings
- * @pp: string of strings
- */
+* f_free - Free a dynamically allocated string array.
+* @pp: Pointer to the string array.
+*/
+
 void f_free(char **pp)
 {
 	char **a = pp;

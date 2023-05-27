@@ -6,7 +6,7 @@
  * @buff: the char buffer
  * @m: address of current position in buf
  *
- * Return: 1 
+ * Return: 1
  */
 int _ischain(data_t *dat, char *buff, size_t *m)
 {
@@ -24,9 +24,9 @@ int _ischain(data_t *dat, char *buff, size_t *m)
 		x++;
 		dat->cmd_buf_type = CMD_AND;
 	}
-	else if (buff[x] == ';') 
+	else if (buff[x] == ';')
 	{
-		buff[x] = 0; 
+		buff[x] = 0;
 		dat->cmd_buf_type = CMD_CHAIN;
 	}
 	else
@@ -40,8 +40,8 @@ int _ischain(data_t *dat, char *buff, size_t *m)
  * @dat: the  struct parameter
  * @buf: the char buffer
  * @a: current position address
- * @j: starting position 
- * @_len: buf length 
+ * @j: starting position
+ * @_len: buf length
  *
  * Return: Void
  */
@@ -99,8 +99,8 @@ int replace_alias(data_t *dat)
 }
 
 /**
- * vars_replace - replaces vars 
- * @dat: the struct parameter 
+ * vars_replace - replaces vars
+ * @dat: the struct parameter
  *
  * Return: 1 if replaced, 0 otherwise
  */

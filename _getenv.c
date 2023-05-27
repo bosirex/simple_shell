@@ -21,7 +21,7 @@ char **get_environ(data_t *dat)
  * _unsetenv - Remove an env variable
  * @dat: Structure having potential arguments.
  * @var: the string env var property
- * 
+ *
  *  Return: 1 on delete, 0 otherwise
  */
 int _unsetenv(data_t *dat, char *var)

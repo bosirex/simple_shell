@@ -2,7 +2,7 @@
 
 /**
  **str_copy - copies a string
- *@dest: string estination 
+ *@dest: string estination
  *@src: string source
  *@n: characters amount copied
  *Return: concatenated string
@@ -59,8 +59,8 @@ char *string_concatenate(char *dest, char *src, int n)
 
 /**
  **string_character - locates a character in a string
- *@s: the string to be parsed
  *@c: the character to look for
+ *@z: pointer
  *Return: (s) a pointer to the memory area s
  */
 char *string_character(char *z, char c)

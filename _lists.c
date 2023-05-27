@@ -5,7 +5,6 @@
  * @hd: address of pointer to hd nd
  * @string: str field of nd
  * @_num: nd index used by history
- *
  * Return: size of list
  */
 lst_t *add_nd(lst_t **hd, const char *string, int _num)
@@ -76,8 +75,7 @@ lst_t *add_nd_end(lst_t **_hd, const char *string, int _num)
 
 /**
  * print_lst_str - prints only the string element linked list
- * @h: first node pointer
- *
+ * @k : pointer
  * Return: list size
  */
 size_t print_lst_str(const lst_t *k)

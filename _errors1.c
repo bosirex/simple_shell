@@ -2,7 +2,7 @@
 
 /**
  * _erratoi - string to integer converter
- * @s: converted string
+ * @z: pointer
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
@@ -12,7 +12,7 @@ int _erratoi(char *z)
 	unsigned long int _result = 0;
 
 	if (*z == '+')
-		z++;  
+		z++;
 	for (y = 0;  z[y] != '\0'; y++)
 	{
 		if (z[y] >= '0' && z[y] <= '9')
@@ -31,7 +31,7 @@ int _erratoi(char *z)
 /**
  * error_print - prints an error message
  * @dat: the parameter & return dat struct
- * @estr: string containing specified error type
+ * @_estr: string containing specified error type
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
  */
@@ -48,9 +48,8 @@ void error_print(data_t *dat, char *_estr)
 
 /**
  * print_dec - function prints a decimal number
- * @input: the input
- * @fd: the filedescriptor to write to
- *
+ * @_input: the input
+ *@file_desc : parameter
  * Return: number of characters printed
  */
 int print_dec(int _input, int file_desc)
@@ -87,10 +86,9 @@ int print_dec(int _input, int file_desc)
 
 /**
  * convt_number - converter function, a clone of itoa
- * @num: number
- * @base: base
- * @flags: argument flags
- *
+ *@number: parameter
+ *@_base: parameter
+ *@_flags: flags
  * Return: string
  */
 char *convt_number(long int number, int _base, int _flags)

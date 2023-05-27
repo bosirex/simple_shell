@@ -4,7 +4,7 @@
  * input_buffer - buffers chained commands
  * @dat: parameter struct
  * @buf: address of buffer
- * @len: address of len var
+ * @_len: address of len var
  *
  * Return: bytes read
  */
@@ -111,7 +111,7 @@ ssize_t read_buf(data_t *dat, char *buf, size_t *i)
 
 /**
  * get_line - gets the next line of input from STDIN
- * @dat: struct parameter 
+ * @dat: struct parameter
  * @ptr:  buffer pointer address.
  * @length: preallocated ptr buffer size
  *

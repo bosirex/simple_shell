@@ -9,7 +9,7 @@
 
 char **string_word(char *strng, char *d)
 {
-	int a, b; 
+	int a, b;
 	int k, num_words = 0, n;
 	char **z;
 

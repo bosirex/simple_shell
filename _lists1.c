@@ -2,8 +2,7 @@
 
 /**
  * length_list - determines length of linked list
- * @h: pointer to first nd
- *
+ * @d: pointer
  * Return: size of list
  */
 size_t length_list(const lst_t *d)
